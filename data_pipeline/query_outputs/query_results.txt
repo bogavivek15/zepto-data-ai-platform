@@ -1,0 +1,542 @@
+
+============================================================
+QUERY 1 - SELECT + WHERE
+============================================================
+
+SQL QUERY:
+SELECT *
+FROM books
+WHERE rating >= 4
+
+OUTPUT:
+ book_id                                                                    title  price_gbp  price_inr  rating  in_stock  category_id
+       1                                                            Sharp Objects      47.82    5045.01       4         1            1
+       3                                                      The Past Never Ends      56.50    5960.75       4         1            1
+       5                          The Murder of Roger Ackroyd (Hercule Poirot #4)      44.10    4652.55       4         1            1
+       9                                   A Time of Torment (Charlie Parker #14)      48.35    5100.92       5         1            1
+      12                    Murder at the 42nd Street Library (Raymond Ambler #1)      54.36    5734.98       4         1            1
+      18        What Happened on Beale Street (Secrets of the South Mysteries #2)      25.37    2676.54       5         1            1
+      19 The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1)      52.30    5517.65       5         1            1
+      20                         Delivering the Truth (Quaker Midwife Mystery #1)      20.89    2203.90       4         1            1
+      21                      The Mysterious Affair at Styles (Hercule Poirot #1)      24.80    2616.40       4         1            1
+      23                                        The Silkworm (Cormoran Strike #2)      23.05    2431.78       5         1            1
+      28   The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)      57.70    6087.35       4         1            1
+      29                                                        The Girl You Lost      12.29    1296.59       5         1            1
+      35                                  A Flight of Arrows (The Pathfinders #2)      55.53    5858.42       5         1            2
+      37                                                             Mrs. Houdini      30.25    3191.38       5         1            2
+      38                                                The Marriage of Opposites      28.08    2962.44       4         1            2
+      41                                                        A Paris Apartment      39.01    4115.55       4         1            2
+      45                          World Without End (The Pillars of the Earth #2)      32.97    3478.34       4         1            2
+      46                                                    The Passion of Dolssa      28.32    2987.76       5         1            2
+      48                                                   Voyager (Outlander #3)      21.07    2222.89       5         1            2
+      49                                                             The Red Tent      35.66    3762.13       5         1            2
+      53                                                   Between Shades of Gray      20.79    2193.34       5         1            2
+      54                                                      While You Were Mine      41.32    4359.26       5         1            2
+      57                                                    Lost Among the Living      27.70    2922.35       4         1            2
+      58                        A Spy's Devotion (The Regency Spies of London #1)      16.97    1790.33       5         1            2
+      59                                               Chase Me (Paris Nights #2)      25.27    2665.98       5         1            3
+      60                                                               Black Dust      34.53    3642.92       5         1            3
+      62                                       First and First (Five Boroughs #3)      15.97    1684.84       4         1            3
+      66                                                 Something More Than This      16.24    1713.32       4         1            3
+      70                                                      Dirty (Dive Bar #1)      40.83    4307.56       4         1            3
+      73                         A Gentleman's Position (Society of Gentlemen #3)      14.75    1556.12       5         1            3
+      89                                                        Imperfect Harmony      34.74    3665.07       4         1            3
+      91                                          Deep Under (Walker Security #1)      47.09    4968.00       5         1            3
+      93                                            Bounty (Colorado Mountain #7)      37.26    3930.93       4         1            3
+      95                                              Private Paris (Private #10)      47.61    5022.85       5         1            4
+      96                                             We Love You, Charlie Freeman      50.27    5303.48       5         1            4
+      97                                                                   Thirst      17.27    1821.98       5         1            4
+     100                                                          The Vacationers      42.15    4446.82       4         1            4
+     101                                     The Regional Office Is Under Attack!      51.36    5418.48       5         1            4
+     102                                 Finders Keepers (Bill Hodges Trilogy #2)      53.53    5647.42       5         1            4
+     103                                                          The Time Keeper      27.88    2941.34       5         1            4
+     104                                                    The Testament of Mary      52.67    5556.68       4         1            4
+     108                                                                    Shtum      55.84    5891.12       4         1            4
+     112                                                I Am Pilgrim (Pilgrim #1)      10.60    1118.30       4         1            4
+     114                                                     Eight Hundred Grapes      14.39    1518.14       4         1            4
+     115                                                       Dear Mr. Knightley      11.21    1182.66       5         1            4
+     119                                  The Silent Sister (Riley MacPherson #1)      46.29    4883.60       5         1            4
+     129                                                        Hystopia: A Novel      21.96    2316.78       4         1            4
+     130                                    The Bourne Identity (Jason Bourne #1)      42.78    4513.29       4         1            4
+     131                                                              Sister Dear      40.20    4241.10       4         1            4
+     134                                                          Deception Point      40.32    4253.76       4         1            4
+     138                                                               Siddhartha      34.22    3610.21       5         1            4
+     140                                                         Digital Fortress      58.00    6119.00       5         1            4
+     141                                                           Atlas Shrugged      26.58    2804.19       5         1            4
+     143                                                          The Nightingale      26.26    2770.43       4         1            4
+     145                                                     The Husband's Secret      52.51    5539.80       5         1            4
+     150                                              Inferno (Robert Langdon #4)      41.00    4325.50       5         1            4
+     151                                 Crazy Rich Asians (Crazy Rich Asians #1)      49.13    5183.22       5         1            4
+     155                                                          The Silent Wife      12.34    1301.87       5         1            4
+     157                                            Kitchens of the Great Midwest      57.20    6034.60       5         1            4
+     158                                                             Bright Lines      39.07    4121.88       5         1            4
+
+
+============================================================
+QUERY 2 - ORDER BY
+============================================================
+
+SQL QUERY:
+SELECT *
+FROM books
+ORDER BY price_gbp DESC
+
+OUTPUT:
+ book_id                                                                     title  price_gbp  price_inr  rating  in_stock  category_id
+      76                                        The Perfect Play (Play by Play #1)      59.99    6328.95       3         1            3
+     139                                         Last One Home (New Beginnings #1)      59.98    6327.89       3         1            4
+      15                                             Boar Island (Anna Pigeon #19)      59.48    6275.14       3         1            1
+     121                                                 The Improbability of Love      59.45    6271.98       1         1            4
+      88                                                  Listen to Me (Fusion #1)      58.99    6223.45       3         1            3
+     128                                                           Miller's Valley      58.54    6175.97       2         1            4
+     140                                                          Digital Fortress      58.00    6119.00       5         1            4
+      28    The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)      57.70    6087.35       4         1            1
+     157                                             Kitchens of the Great Midwest      57.20    6034.60       5         1            4
+     120                                                          The Dinner Party      56.54    5964.97       2         1            4
+       3                                                       The Past Never Ends      56.50    5960.75       4         1            1
+      79                                                        A Walk to Remember      56.43    5953.36       1         1            3
+      65                                          Suddenly in Love (Lake Haven #1)      55.99    5906.95       2         1            3
+     108                                                                     Shtum      55.84    5891.12       4         1            4
+      50                                          The Last Painting of Sara de Vos      55.55    5860.52       2         1            2
+      35                                   A Flight of Arrows (The Pathfinders #2)      55.53    5858.42       5         1            2
+      12                     Murder at the 42nd Street Library (Raymond Ambler #1)      54.36    5734.98       4         1            1
+       6                                            The Last Mile (Amos Decker #2)      54.21    5719.16       2         1            1
+      98                         The Murder That Never Was (Forensic Instincts #5)      54.11    5708.60       3         1            4
+      32                                       1st to Die (Women's Murder Club #1)      53.98    5694.89       1         1            1
+      71                               Take Me Home Tonight (Rock Star Romance #3)      53.98    5694.89       3         1            3
+      33                                                        Tipping the Velvet      53.74    5669.57       1         1            2
+     102                                  Finders Keepers (Bill Hodges Trilogy #2)      53.53    5647.42       5         1            4
+     104                                                     The Testament of Mary      52.67    5556.68       4         1            4
+     145                                                      The Husband's Secret      52.51    5539.80       5         1            4
+      19  The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1)      52.30    5517.65       5         1            1
+     154                                                             When I'm Gone      51.96    5481.78       3         1            4
+     101                                      The Regional Office Is Under Attack!      51.36    5418.48       5         1            4
+     127                                            The High Mountains of Portugal      51.15    5396.32       1         1            4
+      96                                              We Love You, Charlie Freeman      50.27    5303.48       5         1            4
+      94                                                                Soumission      50.10    5285.55       1         1            4
+     132                                                       Memoirs of a Geisha      49.67    5240.19       3         1            4
+      51                         The Guernsey Literary and Potato Peel Pie Society      49.53    5225.42       1         1            2
+     151                                  Crazy Rich Asians (Crazy Rich Asians #1)      49.13    5183.22       5         1            4
+      85                                       This One Moment (Pushing Limits #1)      48.71    5138.90       1         1            3
+     125                                                                  11/22/63      48.48    5114.64       3         1            4
+       9                                    A Time of Torment (Charlie Parker #14)      48.35    5100.92       5         1            1
+       1                                                             Sharp Objects      47.82    5045.01       4         1            1
+      72                                     Off the Hook (Fishing for Trouble #1)      47.67    5029.19       3         1            3
+      95                                               Private Paris (Private #10)      47.61    5022.85       5         1            4
+      91                                           Deep Under (Walker Security #1)      47.09    4968.00       5         1            3
+      52                                                     Girl in the Blue Coat      46.83    4940.56       2         1            2
+     119                                   The Silent Sister (Riley MacPherson #1)      46.29    4883.60       5         1            4
+      39                           Glory over Everything: Beyond The Kitchen House      45.84    4836.12       3         1            2
+     136                                                                  The Firm      45.56    4806.58       3         1            4
+      81                                                             The Obsession      45.43    4792.86       1         1            3
+     106                                                          Take Me with You      45.21    4769.66       3         1            4
+     123                                               Lies and Other Acts of Love      45.14    4762.27       1         1            4
+     149                                          Jurassic Park (Jurassic Park #1)      44.97    4744.34       1         1            4
+     137                                                           The Expatriates      44.58    4703.19       2         1            4
+       5                           The Murder of Roger Ackroyd (Hercule Poirot #4)      44.10    4652.55       4         1            1
+      24                                                                The Exiled      43.45    4583.98       3         1            1
+     130                                     The Bourne Identity (Jason Bourne #1)      42.78    4513.29       4         1            4
+     100                                                           The Vacationers      42.15    4446.82       4         1            4
+     109                                                    My Name Is Lucy Barton      41.56    4384.58       1         1            4
+      54                                                       While You Were Mine      41.32    4359.26       5         1            2
+      92                                 Charity's Cross (Charles Towne Belles #4)      41.24    4350.82       1         1            3
+     150                                               Inferno (Robert Langdon #4)      41.00    4325.50       5         1            4
+      70                                                       Dirty (Dive Bar #1)      40.83    4307.56       4         1            3
+     134                                                           Deception Point      40.32    4253.76       4         1            4
+     131                                                               Sister Dear      40.20    4241.10       4         1            4
+      84                               Where Lightning Strikes (Bleeding Stars #3)      39.77    4195.74       3         1            3
+     118                                                          A Man Called Ove      39.72    4190.46       1         1            4
+      90                                               Fighting Fate (Fighting #6)      39.24    4139.82       3         1            3
+     158                                                              Bright Lines      39.07    4121.88       5         1            4
+      41                                                         A Paris Apartment      39.01    4115.55       4         1            2
+      87                                      My Perfect Mistake (Over the Top #1)      38.92    4106.06       2         1            3
+      22                                     In the Woods (Dublin Murder Squad #1)      38.38    4049.09       2         1            1
+      44                                                    The Invention of Wings      37.34    3939.37       1         1            2
+      93                                             Bounty (Colorado Mountain #7)      37.26    3930.93       4         1            3
+      36                                                     The House by the Lake      36.95    3898.23       1         1            2
+      49                                                              The Red Tent      35.66    3762.13       5         1            2
+      67                                         Doing It Over (Most Likely To #1)      35.61    3756.86       3         1            3
+      13                                                               Most Wanted      35.28    3722.04       3         1            1
+      89                                                         Imperfect Harmony      34.74    3665.07       4         1            3
+      55                                                         The Secret Healer      34.56    3646.08       3         1            2
+      60                                                                Black Dust      34.53    3642.92       5         1            3
+     138                                                                Siddhartha      34.22    3610.21       5         1            4
+      61                             Her Backup Boyfriend (The Sorensen Family #1)      33.97    3583.84       1         1            3
+      45                           World Without End (The Pillars of the Earth #2)      32.97    3478.34       4         1            2
+      68                                       The Wedding Pact (The O'Malleys #2)      32.61    3440.36       3         1            3
+      75                           A Girl's Guide to Moving On (New Beginnings #2)      31.30    3302.15       1         1            3
+     156                                                      The Bette Davis Club      30.66    3234.63       3         1            4
+      37                                                              Mrs. Houdini      30.25    3191.38       5         1            2
+      34 Forever and Forever: The Courtship of Henry Longfellow and Fanny Appleton      29.69    3132.30       3         1            2
+     111                                     Mr. Mercedes (Bill Hodges Trilogy #1)      28.90    3048.95       1         1            4
+      69                                   Hold Your Breath (Search and Rescue #1)      28.82    3040.51       1         1            3
+      86                                                  Rhythm, Chord & Malykhin      28.34    2989.87       2         1            3
+      46                                                     The Passion of Dolssa      28.32    2987.76       5         1            2
+      38                                                 The Marriage of Opposites      28.08    2962.44       4         1            2
+     126                                                                 The Shack      28.03    2957.16       1         1            4
+     103                                                           The Time Keeper      27.88    2941.34       5         1            4
+      57                                                     Lost Among the Living      27.70    2922.35       4         1            2
+      83                                         Best of My Love (Fool's Gold #20)      27.41    2891.76       2         1            3
+     144                                                            The Infinities      27.41    2891.76       1         1            4
+      16                                                                 The Widow      27.26    2875.93       2         1            1
+     113                                          Eligible (The Austen Project #4)      27.09    2858.00       3         1            4
+      11                                          Poisonous (Max Revere Novels #3)      26.80    2827.40       3         1            1
+      47                                                 Girl With a Pearl Earring      26.77    2824.24       1         1            2
+     141                                                            Atlas Shrugged      26.58    2804.19       5         1            4
+     107                                              Still Life with Bread Crumbs      26.41    2786.26       3         1            4
+     143                                                           The Nightingale      26.26    2770.43       4         1            4
+     105                                       The First Hostage (J.B. Collins #2)      25.85    2727.18       3         1            4
+      56                                                                  Starlark      25.83    2725.06       3         1            2
+      26                                        Extreme Prey (Lucas Davenport #26)      25.40    2679.70       3         1            1
+      18         What Happened on Beale Street (Secrets of the South Mysteries #2)      25.37    2676.54       5         1            1
+      59                                                Chase Me (Paris Nights #2)      25.27    2665.98       5         1            3
+     116                               Cometh the Hour (The Clifton Chronicles #6)      25.01    2638.56       3         1            4
+      21                       The Mysterious Affair at Styles (Hercule Poirot #1)      24.80    2616.40       4         1            1
+     135                                                 The Little Paris Bookshop      24.73    2609.02       3         1            4
+      27                                       Career of Evil (Cormoran Strike #3)      24.72    2607.96       2         1            1
+     110                                                             My Mrs. Brown      24.48    2582.64       3         1            4
+      64                                                         The Wedding Dress      24.12    2544.66       1         1            3
+     142                                                       Three-Martini Lunch      23.21    2448.66       3         1            4
+      23                                         The Silkworm (Cormoran Strike #2)      23.05    2431.78       5         1            1
+     146                                     The Da Vinci Code (Robert Langdon #2)      22.96    2422.28       2         1            4
+     152                                                           Big Little Lies      22.11    2332.60       1         1            4
+     147                                                       The Art of Fielding      22.10    2331.55       1         1            4
+      63                                     Fifty Shades Darker (Fifty Shades #2)      21.96    2316.78       1         1            3
+     129                                                         Hystopia: A Novel      21.96    2316.78       4         1            4
+      48                                                    Voyager (Outlander #3)      21.07    2222.89       5         1            2
+      99                                                    Tuesday Nights in 1980      21.04    2219.72       2         1            4
+      74                                                           Sit, Stay, Love      20.90    2204.95       3         1            3
+      20                          Delivering the Truth (Quaker Midwife Mystery #1)      20.89    2203.90       4         1            1
+      53                                                    Between Shades of Gray      20.79    2193.34       5         1            2
+      40                                                      Love, Lies and Spies      20.55    2168.02       2         1            2
+      31                                      Blood Defense (Samantha Brinkman #1)      20.30    2141.65       3         1            1
+       2                                                      In a Dark, Dark Wood      19.63    2070.96       1         1            1
+      25                                 The Cuckoo's Calling (Cormoran Strike #1)      19.21    2026.66       1         1            1
+     133                                          Me Before You (Me Before You #1)      19.02    2006.61       1         1            4
+      42                                                               Lilac Girls      17.28    1823.04       2         1            2
+      97                                                                    Thirst      17.27    1821.98       5         1            4
+     117                                                           Balloon Animals      17.03    1796.67       3         1            4
+      58                         A Spy's Devotion (The Regency Spies of London #1)      16.97    1790.33       5         1            2
+     153                                                        The Course of Love      16.78    1770.29       3         1            4
+      10                                   A Study in Scarlet (Sherlock Holmes #1)      16.73    1765.02       2         1            1
+       4                                                          A Murder in Time      16.64    1755.52       1         1            1
+      43                                The Constant Princess (The Tudor Court #1)      16.62    1753.41       3         1            2
+     124                                                                Daredevils      16.34    1723.87       3         1            4
+      66                                                  Something More Than This      16.24    1713.32       4         1            3
+      62                                        First and First (Five Boroughs #3)      15.97    1684.84       4         1            3
+      30                                 The Girl In The Ice (DCI Erika Foster #1)      15.85    1672.18       3         1            1
+      73                          A Gentleman's Position (Society of Gentlemen #3)      14.75    1556.12       5         1            3
+     114                                                      Eight Hundred Grapes      14.39    1518.14       4         1            4
+       7                                    That Darkness (Gardiner and Renner #1)      13.92    1468.56       1         1            1
+      17                                                         Playing with Fire      13.71    1446.41       3         1            1
+      78                                       Changing the Game (Play by Play #2)      13.38    1411.59       3         1            3
+     122                                                          Mothering Sunday      13.34    1407.37       2         1            4
+      77                                  Dark Lover (Black Dagger Brotherhood #1)      12.87    1357.78       1         1            3
+     148                                                          Lila (Gilead #3)      12.47    1315.58       3         1            4
+     155                                                           The Silent Wife      12.34    1301.87       5         1            4
+      29                                                         The Girl You Lost      12.29    1296.59       5         1            1
+      80                                The Purest Hook (Second Circle Tattoos #3)      12.25    1292.38       1         1            3
+      14                                                Hide Away (Eve Duncan #20)      11.84    1249.12       1         1            1
+     115                                                        Dear Mr. Knightley      11.21    1182.66       5         1            4
+      82                                                      Reservations for Two      11.10    1171.05       3         1            3
+       8                                      Tastes Like Fear (DI Marnie Rome #3)      10.69    1127.79       1         1            1
+     112                                                 I Am Pilgrim (Pilgrim #1)      10.60    1118.30       4         1            4
+
+
+============================================================
+QUERY 3 - LIMIT
+============================================================
+
+SQL QUERY:
+SELECT *
+FROM books
+ORDER BY price_gbp DESC
+LIMIT 10
+
+OUTPUT:
+ book_id                                                                  title  price_gbp  price_inr  rating  in_stock  category_id
+      76                                     The Perfect Play (Play by Play #1)      59.99    6328.95       3         1            3
+     139                                      Last One Home (New Beginnings #1)      59.98    6327.89       3         1            4
+      15                                          Boar Island (Anna Pigeon #19)      59.48    6275.14       3         1            1
+     121                                              The Improbability of Love      59.45    6271.98       1         1            4
+      88                                               Listen to Me (Fusion #1)      58.99    6223.45       3         1            3
+     128                                                        Miller's Valley      58.54    6175.97       2         1            4
+     140                                                       Digital Fortress      58.00    6119.00       5         1            4
+      28 The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)      57.70    6087.35       4         1            1
+     157                                          Kitchens of the Great Midwest      57.20    6034.60       5         1            4
+     120                                                       The Dinner Party      56.54    5964.97       2         1            4
+
+
+============================================================
+QUERY 4 - DISTINCT
+============================================================
+
+SQL QUERY:
+SELECT DISTINCT category_id
+FROM books
+
+OUTPUT:
+ category_id
+           1
+           2
+           3
+           4
+
+
+============================================================
+QUERY 5 - BETWEEN
+============================================================
+
+SQL QUERY:
+SELECT *
+FROM books
+WHERE price_gbp BETWEEN 20 AND 40
+
+OUTPUT:
+ book_id                                                                     title  price_gbp  price_inr  rating  in_stock  category_id
+      11                                          Poisonous (Max Revere Novels #3)      26.80    2827.40       3         1            1
+      13                                                               Most Wanted      35.28    3722.04       3         1            1
+      16                                                                 The Widow      27.26    2875.93       2         1            1
+      18         What Happened on Beale Street (Secrets of the South Mysteries #2)      25.37    2676.54       5         1            1
+      20                          Delivering the Truth (Quaker Midwife Mystery #1)      20.89    2203.90       4         1            1
+      21                       The Mysterious Affair at Styles (Hercule Poirot #1)      24.80    2616.40       4         1            1
+      22                                     In the Woods (Dublin Murder Squad #1)      38.38    4049.09       2         1            1
+      23                                         The Silkworm (Cormoran Strike #2)      23.05    2431.78       5         1            1
+      26                                        Extreme Prey (Lucas Davenport #26)      25.40    2679.70       3         1            1
+      27                                       Career of Evil (Cormoran Strike #3)      24.72    2607.96       2         1            1
+      31                                      Blood Defense (Samantha Brinkman #1)      20.30    2141.65       3         1            1
+      34 Forever and Forever: The Courtship of Henry Longfellow and Fanny Appleton      29.69    3132.30       3         1            2
+      36                                                     The House by the Lake      36.95    3898.23       1         1            2
+      37                                                              Mrs. Houdini      30.25    3191.38       5         1            2
+      38                                                 The Marriage of Opposites      28.08    2962.44       4         1            2
+      40                                                      Love, Lies and Spies      20.55    2168.02       2         1            2
+      41                                                         A Paris Apartment      39.01    4115.55       4         1            2
+      44                                                    The Invention of Wings      37.34    3939.37       1         1            2
+      45                           World Without End (The Pillars of the Earth #2)      32.97    3478.34       4         1            2
+      46                                                     The Passion of Dolssa      28.32    2987.76       5         1            2
+      47                                                 Girl With a Pearl Earring      26.77    2824.24       1         1            2
+      48                                                    Voyager (Outlander #3)      21.07    2222.89       5         1            2
+      49                                                              The Red Tent      35.66    3762.13       5         1            2
+      53                                                    Between Shades of Gray      20.79    2193.34       5         1            2
+      55                                                         The Secret Healer      34.56    3646.08       3         1            2
+      56                                                                  Starlark      25.83    2725.06       3         1            2
+      57                                                     Lost Among the Living      27.70    2922.35       4         1            2
+      59                                                Chase Me (Paris Nights #2)      25.27    2665.98       5         1            3
+      60                                                                Black Dust      34.53    3642.92       5         1            3
+      61                             Her Backup Boyfriend (The Sorensen Family #1)      33.97    3583.84       1         1            3
+      63                                     Fifty Shades Darker (Fifty Shades #2)      21.96    2316.78       1         1            3
+      64                                                         The Wedding Dress      24.12    2544.66       1         1            3
+      67                                         Doing It Over (Most Likely To #1)      35.61    3756.86       3         1            3
+      68                                       The Wedding Pact (The O'Malleys #2)      32.61    3440.36       3         1            3
+      69                                   Hold Your Breath (Search and Rescue #1)      28.82    3040.51       1         1            3
+      74                                                           Sit, Stay, Love      20.90    2204.95       3         1            3
+      75                           A Girl's Guide to Moving On (New Beginnings #2)      31.30    3302.15       1         1            3
+      83                                         Best of My Love (Fool's Gold #20)      27.41    2891.76       2         1            3
+      84                               Where Lightning Strikes (Bleeding Stars #3)      39.77    4195.74       3         1            3
+      86                                                  Rhythm, Chord & Malykhin      28.34    2989.87       2         1            3
+      87                                      My Perfect Mistake (Over the Top #1)      38.92    4106.06       2         1            3
+      89                                                         Imperfect Harmony      34.74    3665.07       4         1            3
+      90                                               Fighting Fate (Fighting #6)      39.24    4139.82       3         1            3
+      93                                             Bounty (Colorado Mountain #7)      37.26    3930.93       4         1            3
+      99                                                    Tuesday Nights in 1980      21.04    2219.72       2         1            4
+     103                                                           The Time Keeper      27.88    2941.34       5         1            4
+     105                                       The First Hostage (J.B. Collins #2)      25.85    2727.18       3         1            4
+     107                                              Still Life with Bread Crumbs      26.41    2786.26       3         1            4
+     110                                                             My Mrs. Brown      24.48    2582.64       3         1            4
+     111                                     Mr. Mercedes (Bill Hodges Trilogy #1)      28.90    3048.95       1         1            4
+     113                                          Eligible (The Austen Project #4)      27.09    2858.00       3         1            4
+     116                               Cometh the Hour (The Clifton Chronicles #6)      25.01    2638.56       3         1            4
+     118                                                          A Man Called Ove      39.72    4190.46       1         1            4
+     126                                                                 The Shack      28.03    2957.16       1         1            4
+     129                                                         Hystopia: A Novel      21.96    2316.78       4         1            4
+     135                                                 The Little Paris Bookshop      24.73    2609.02       3         1            4
+     138                                                                Siddhartha      34.22    3610.21       5         1            4
+     141                                                            Atlas Shrugged      26.58    2804.19       5         1            4
+     142                                                       Three-Martini Lunch      23.21    2448.66       3         1            4
+     143                                                           The Nightingale      26.26    2770.43       4         1            4
+     144                                                            The Infinities      27.41    2891.76       1         1            4
+     146                                     The Da Vinci Code (Robert Langdon #2)      22.96    2422.28       2         1            4
+     147                                                       The Art of Fielding      22.10    2331.55       1         1            4
+     152                                                           Big Little Lies      22.11    2332.60       1         1            4
+     156                                                      The Bette Davis Club      30.66    3234.63       3         1            4
+     158                                                              Bright Lines      39.07    4121.88       5         1            4
+
+
+============================================================
+QUERY 6 - JOIN
+============================================================
+
+SQL QUERY:
+SELECT
+    b.book_id,
+    b.title,
+    b.price_gbp,
+    b.price_inr,
+    b.rating,
+    b.in_stock,
+    c.category_name
+FROM books AS b
+JOIN categories AS c
+    ON b.category_id = c.category_id
+
+OUTPUT:
+ book_id                                                                     title  price_gbp  price_inr  rating  in_stock      category_name
+       1                                                             Sharp Objects      47.82    5045.01       4         1            Mystery
+       2                                                      In a Dark, Dark Wood      19.63    2070.96       1         1            Mystery
+       3                                                       The Past Never Ends      56.50    5960.75       4         1            Mystery
+       4                                                          A Murder in Time      16.64    1755.52       1         1            Mystery
+       5                           The Murder of Roger Ackroyd (Hercule Poirot #4)      44.10    4652.55       4         1            Mystery
+       6                                            The Last Mile (Amos Decker #2)      54.21    5719.16       2         1            Mystery
+       7                                    That Darkness (Gardiner and Renner #1)      13.92    1468.56       1         1            Mystery
+       8                                      Tastes Like Fear (DI Marnie Rome #3)      10.69    1127.79       1         1            Mystery
+       9                                    A Time of Torment (Charlie Parker #14)      48.35    5100.92       5         1            Mystery
+      10                                   A Study in Scarlet (Sherlock Holmes #1)      16.73    1765.02       2         1            Mystery
+      11                                          Poisonous (Max Revere Novels #3)      26.80    2827.40       3         1            Mystery
+      12                     Murder at the 42nd Street Library (Raymond Ambler #1)      54.36    5734.98       4         1            Mystery
+      13                                                               Most Wanted      35.28    3722.04       3         1            Mystery
+      14                                                Hide Away (Eve Duncan #20)      11.84    1249.12       1         1            Mystery
+      15                                             Boar Island (Anna Pigeon #19)      59.48    6275.14       3         1            Mystery
+      16                                                                 The Widow      27.26    2875.93       2         1            Mystery
+      17                                                         Playing with Fire      13.71    1446.41       3         1            Mystery
+      18         What Happened on Beale Street (Secrets of the South Mysteries #2)      25.37    2676.54       5         1            Mystery
+      19  The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1)      52.30    5517.65       5         1            Mystery
+      20                          Delivering the Truth (Quaker Midwife Mystery #1)      20.89    2203.90       4         1            Mystery
+      21                       The Mysterious Affair at Styles (Hercule Poirot #1)      24.80    2616.40       4         1            Mystery
+      22                                     In the Woods (Dublin Murder Squad #1)      38.38    4049.09       2         1            Mystery
+      23                                         The Silkworm (Cormoran Strike #2)      23.05    2431.78       5         1            Mystery
+      24                                                                The Exiled      43.45    4583.98       3         1            Mystery
+      25                                 The Cuckoo's Calling (Cormoran Strike #1)      19.21    2026.66       1         1            Mystery
+      26                                        Extreme Prey (Lucas Davenport #26)      25.40    2679.70       3         1            Mystery
+      27                                       Career of Evil (Cormoran Strike #3)      24.72    2607.96       2         1            Mystery
+      28    The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)      57.70    6087.35       4         1            Mystery
+      29                                                         The Girl You Lost      12.29    1296.59       5         1            Mystery
+      30                                 The Girl In The Ice (DCI Erika Foster #1)      15.85    1672.18       3         1            Mystery
+      31                                      Blood Defense (Samantha Brinkman #1)      20.30    2141.65       3         1            Mystery
+      32                                       1st to Die (Women's Murder Club #1)      53.98    5694.89       1         1            Mystery
+      33                                                        Tipping the Velvet      53.74    5669.57       1         1 Historical Fiction
+      34 Forever and Forever: The Courtship of Henry Longfellow and Fanny Appleton      29.69    3132.30       3         1 Historical Fiction
+      35                                   A Flight of Arrows (The Pathfinders #2)      55.53    5858.42       5         1 Historical Fiction
+      36                                                     The House by the Lake      36.95    3898.23       1         1 Historical Fiction
+      37                                                              Mrs. Houdini      30.25    3191.38       5         1 Historical Fiction
+      38                                                 The Marriage of Opposites      28.08    2962.44       4         1 Historical Fiction
+      39                           Glory over Everything: Beyond The Kitchen House      45.84    4836.12       3         1 Historical Fiction
+      40                                                      Love, Lies and Spies      20.55    2168.02       2         1 Historical Fiction
+      41                                                         A Paris Apartment      39.01    4115.55       4         1 Historical Fiction
+      42                                                               Lilac Girls      17.28    1823.04       2         1 Historical Fiction
+      43                                The Constant Princess (The Tudor Court #1)      16.62    1753.41       3         1 Historical Fiction
+      44                                                    The Invention of Wings      37.34    3939.37       1         1 Historical Fiction
+      45                           World Without End (The Pillars of the Earth #2)      32.97    3478.34       4         1 Historical Fiction
+      46                                                     The Passion of Dolssa      28.32    2987.76       5         1 Historical Fiction
+      47                                                 Girl With a Pearl Earring      26.77    2824.24       1         1 Historical Fiction
+      48                                                    Voyager (Outlander #3)      21.07    2222.89       5         1 Historical Fiction
+      49                                                              The Red Tent      35.66    3762.13       5         1 Historical Fiction
+      50                                          The Last Painting of Sara de Vos      55.55    5860.52       2         1 Historical Fiction
+      51                         The Guernsey Literary and Potato Peel Pie Society      49.53    5225.42       1         1 Historical Fiction
+      52                                                     Girl in the Blue Coat      46.83    4940.56       2         1 Historical Fiction
+      53                                                    Between Shades of Gray      20.79    2193.34       5         1 Historical Fiction
+      54                                                       While You Were Mine      41.32    4359.26       5         1 Historical Fiction
+      55                                                         The Secret Healer      34.56    3646.08       3         1 Historical Fiction
+      56                                                                  Starlark      25.83    2725.06       3         1 Historical Fiction
+      57                                                     Lost Among the Living      27.70    2922.35       4         1 Historical Fiction
+      58                         A Spy's Devotion (The Regency Spies of London #1)      16.97    1790.33       5         1 Historical Fiction
+      59                                                Chase Me (Paris Nights #2)      25.27    2665.98       5         1            Romance
+      60                                                                Black Dust      34.53    3642.92       5         1            Romance
+      61                             Her Backup Boyfriend (The Sorensen Family #1)      33.97    3583.84       1         1            Romance
+      62                                        First and First (Five Boroughs #3)      15.97    1684.84       4         1            Romance
+      63                                     Fifty Shades Darker (Fifty Shades #2)      21.96    2316.78       1         1            Romance
+      64                                                         The Wedding Dress      24.12    2544.66       1         1            Romance
+      65                                          Suddenly in Love (Lake Haven #1)      55.99    5906.95       2         1            Romance
+      66                                                  Something More Than This      16.24    1713.32       4         1            Romance
+      67                                         Doing It Over (Most Likely To #1)      35.61    3756.86       3         1            Romance
+      68                                       The Wedding Pact (The O'Malleys #2)      32.61    3440.36       3         1            Romance
+      69                                   Hold Your Breath (Search and Rescue #1)      28.82    3040.51       1         1            Romance
+      70                                                       Dirty (Dive Bar #1)      40.83    4307.56       4         1            Romance
+      71                               Take Me Home Tonight (Rock Star Romance #3)      53.98    5694.89       3         1            Romance
+      72                                     Off the Hook (Fishing for Trouble #1)      47.67    5029.19       3         1            Romance
+      73                          A Gentleman's Position (Society of Gentlemen #3)      14.75    1556.12       5         1            Romance
+      74                                                           Sit, Stay, Love      20.90    2204.95       3         1            Romance
+      75                           A Girl's Guide to Moving On (New Beginnings #2)      31.30    3302.15       1         1            Romance
+      76                                        The Perfect Play (Play by Play #1)      59.99    6328.95       3         1            Romance
+      77                                  Dark Lover (Black Dagger Brotherhood #1)      12.87    1357.78       1         1            Romance
+      78                                       Changing the Game (Play by Play #2)      13.38    1411.59       3         1            Romance
+      79                                                        A Walk to Remember      56.43    5953.36       1         1            Romance
+      80                                The Purest Hook (Second Circle Tattoos #3)      12.25    1292.38       1         1            Romance
+      81                                                             The Obsession      45.43    4792.86       1         1            Romance
+      82                                                      Reservations for Two      11.10    1171.05       3         1            Romance
+      83                                         Best of My Love (Fool's Gold #20)      27.41    2891.76       2         1            Romance
+      84                               Where Lightning Strikes (Bleeding Stars #3)      39.77    4195.74       3         1            Romance
+      85                                       This One Moment (Pushing Limits #1)      48.71    5138.90       1         1            Romance
+      86                                                  Rhythm, Chord & Malykhin      28.34    2989.87       2         1            Romance
+      87                                      My Perfect Mistake (Over the Top #1)      38.92    4106.06       2         1            Romance
+      88                                                  Listen to Me (Fusion #1)      58.99    6223.45       3         1            Romance
+      89                                                         Imperfect Harmony      34.74    3665.07       4         1            Romance
+      90                                               Fighting Fate (Fighting #6)      39.24    4139.82       3         1            Romance
+      91                                           Deep Under (Walker Security #1)      47.09    4968.00       5         1            Romance
+      92                                 Charity's Cross (Charles Towne Belles #4)      41.24    4350.82       1         1            Romance
+      93                                             Bounty (Colorado Mountain #7)      37.26    3930.93       4         1            Romance
+      94                                                                Soumission      50.10    5285.55       1         1            Fiction
+      95                                               Private Paris (Private #10)      47.61    5022.85       5         1            Fiction
+      96                                              We Love You, Charlie Freeman      50.27    5303.48       5         1            Fiction
+      97                                                                    Thirst      17.27    1821.98       5         1            Fiction
+      98                         The Murder That Never Was (Forensic Instincts #5)      54.11    5708.60       3         1            Fiction
+      99                                                    Tuesday Nights in 1980      21.04    2219.72       2         1            Fiction
+     100                                                           The Vacationers      42.15    4446.82       4         1            Fiction
+     101                                      The Regional Office Is Under Attack!      51.36    5418.48       5         1            Fiction
+     102                                  Finders Keepers (Bill Hodges Trilogy #2)      53.53    5647.42       5         1            Fiction
+     103                                                           The Time Keeper      27.88    2941.34       5         1            Fiction
+     104                                                     The Testament of Mary      52.67    5556.68       4         1            Fiction
+     105                                       The First Hostage (J.B. Collins #2)      25.85    2727.18       3         1            Fiction
+     106                                                          Take Me with You      45.21    4769.66       3         1            Fiction
+     107                                              Still Life with Bread Crumbs      26.41    2786.26       3         1            Fiction
+     108                                                                     Shtum      55.84    5891.12       4         1            Fiction
+     109                                                    My Name Is Lucy Barton      41.56    4384.58       1         1            Fiction
+     110                                                             My Mrs. Brown      24.48    2582.64       3         1            Fiction
+     111                                     Mr. Mercedes (Bill Hodges Trilogy #1)      28.90    3048.95       1         1            Fiction
+     112                                                 I Am Pilgrim (Pilgrim #1)      10.60    1118.30       4         1            Fiction
+     113                                          Eligible (The Austen Project #4)      27.09    2858.00       3         1            Fiction
+     114                                                      Eight Hundred Grapes      14.39    1518.14       4         1            Fiction
+     115                                                        Dear Mr. Knightley      11.21    1182.66       5         1            Fiction
+     116                               Cometh the Hour (The Clifton Chronicles #6)      25.01    2638.56       3         1            Fiction
+     117                                                           Balloon Animals      17.03    1796.67       3         1            Fiction
+     118                                                          A Man Called Ove      39.72    4190.46       1         1            Fiction
+     119                                   The Silent Sister (Riley MacPherson #1)      46.29    4883.60       5         1            Fiction
+     120                                                          The Dinner Party      56.54    5964.97       2         1            Fiction
+     121                                                 The Improbability of Love      59.45    6271.98       1         1            Fiction
+     122                                                          Mothering Sunday      13.34    1407.37       2         1            Fiction
+     123                                               Lies and Other Acts of Love      45.14    4762.27       1         1            Fiction
+     124                                                                Daredevils      16.34    1723.87       3         1            Fiction
+     125                                                                  11/22/63      48.48    5114.64       3         1            Fiction
+     126                                                                 The Shack      28.03    2957.16       1         1            Fiction
+     127                                            The High Mountains of Portugal      51.15    5396.32       1         1            Fiction
+     128                                                           Miller's Valley      58.54    6175.97       2         1            Fiction
+     129                                                         Hystopia: A Novel      21.96    2316.78       4         1            Fiction
+     130                                     The Bourne Identity (Jason Bourne #1)      42.78    4513.29       4         1            Fiction
+     131                                                               Sister Dear      40.20    4241.10       4         1            Fiction
+     132                                                       Memoirs of a Geisha      49.67    5240.19       3         1            Fiction
+     133                                          Me Before You (Me Before You #1)      19.02    2006.61       1         1            Fiction
+     134                                                           Deception Point      40.32    4253.76       4         1            Fiction
+     135                                                 The Little Paris Bookshop      24.73    2609.02       3         1            Fiction
+     136                                                                  The Firm      45.56    4806.58       3         1            Fiction
+     137                                                           The Expatriates      44.58    4703.19       2         1            Fiction
+     138                                                                Siddhartha      34.22    3610.21       5         1            Fiction
+     139                                         Last One Home (New Beginnings #1)      59.98    6327.89       3         1            Fiction
+     140                                                          Digital Fortress      58.00    6119.00       5         1            Fiction
+     141                                                            Atlas Shrugged      26.58    2804.19       5         1            Fiction
+     142                                                       Three-Martini Lunch      23.21    2448.66       3         1            Fiction
+     143                                                           The Nightingale      26.26    2770.43       4         1            Fiction
+     144                                                            The Infinities      27.41    2891.76       1         1            Fiction
+     145                                                      The Husband's Secret      52.51    5539.80       5         1            Fiction
+     146                                     The Da Vinci Code (Robert Langdon #2)      22.96    2422.28       2         1            Fiction
+     147                                                       The Art of Fielding      22.10    2331.55       1         1            Fiction
+     148                                                          Lila (Gilead #3)      12.47    1315.58       3         1            Fiction
+     149                                          Jurassic Park (Jurassic Park #1)      44.97    4744.34       1         1            Fiction
+     150                                               Inferno (Robert Langdon #4)      41.00    4325.50       5         1            Fiction
+     151                                  Crazy Rich Asians (Crazy Rich Asians #1)      49.13    5183.22       5         1            Fiction
+     152                                                           Big Little Lies      22.11    2332.60       1         1            Fiction
+     153                                                        The Course of Love      16.78    1770.29       3         1            Fiction
+     154                                                             When I'm Gone      51.96    5481.78       3         1            Fiction
+     155                                                           The Silent Wife      12.34    1301.87       5         1            Fiction
+     156                                                      The Bette Davis Club      30.66    3234.63       3         1            Fiction
+     157                                             Kitchens of the Great Midwest      57.20    6034.60       5         1            Fiction
+     158                                                              Bright Lines      39.07    4121.88       5         1            Fiction
+
