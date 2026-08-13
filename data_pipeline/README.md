@@ -213,3 +213,7 @@ The cleaned columns have the following types:
 - `rating` — integer
 - `in_stock` — boolean
 - `price_inr` — float
+
+## Reproducibility
+
+The pipeline can be regenerated from the main Books to Scrape website using the provided Python scripts. The SQLite database can also be recreated from the cleaned CSV data.
