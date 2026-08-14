@@ -1266,8 +1266,10 @@ full_pipeline_path = (
     "best_titanic_pipeline.joblib"
 )
 
+best_baseline_pipeline = trained_pipelines["Random Forest"]
+
 joblib.dump(
-    best_rf_pipeline,
+    best_baseline_pipeline,
     full_pipeline_path
 )
 
@@ -1293,7 +1295,7 @@ raw_sample = X_test.iloc[
 ]
 
 original_predictions = (
-    best_rf_pipeline.predict(
+    best_baseline_pipeline.predict(
         raw_sample
     )
 )
