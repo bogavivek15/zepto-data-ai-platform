@@ -197,17 +197,30 @@ The query was routed to `general_question` and handled by `direct_answer`.
 
 ## Local Run
 
+Run the following commands from the repository root unless otherwise stated.
+
+Navigate to the `support_assistant` directory:
+
 ```powershell
+cd support_assistant
 python -m pip install -r requirements.txt
 python create_docs.py
 python ingest.py
 uvicorn main:app --reload
 ```
 
+Local API will be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
 ## Docker
 
+From the repository root:
+
 ```powershell
-docker build -t zepto-support .
+docker build -t zepto-support ./support_assistant
 docker run -p 7860:7860 zepto-support
 ```
 

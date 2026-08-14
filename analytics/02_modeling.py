@@ -61,11 +61,11 @@ os.makedirs(
 
 
 # ============================================================
-# LOAD THE SAME COMMITTED CLEANED DATA
+# LOAD THE SAME COMMITTED RAW DATA
 # ============================================================
 
 df = pd.read_csv(
-    "analytics/titanic_cleaned.csv"
+    "analytics/titanic.csv"
 )
 
 print(
@@ -701,7 +701,7 @@ imbalance_results.append({
 
 
 # ------------------------------------------------------------
-# SMOTE — TRAINING FOLD ONLY
+# SMOTE - TRAINING FOLD ONLY
 # ------------------------------------------------------------
 
 smote_preprocessor = preprocessor
@@ -936,11 +936,11 @@ print(
 
 
 # ============================================================
-# REGRESSION — PREDICT FARE
+# REGRESSION - PREDICT FARE
 # ============================================================
 
 print(
-    "\n========== REGRESSION — FARE PREDICTION =========="
+    "\n========== REGRESSION - FARE PREDICTION =========="
 )
 
 regression_features = [
@@ -979,7 +979,6 @@ reg_categorical_columns = (
         include=[
             "object",
             "category",
-            "bool"
         ]
     )
     .columns
@@ -1117,12 +1116,12 @@ print(
 )
 
 print(
-    "R²:",
+    "R2:",
     r2
 )
 
 print(
-    "Adjusted R²:",
+    "Adjusted R2:",
     adjusted_r2
 )
 
@@ -1205,8 +1204,8 @@ regression_row = pd.DataFrame([{
     "Model": "Linear Regression",
     "MAE": mae,
     "RMSE": rmse,
-    "R²": r2,
-    "Adjusted R²": adjusted_r2
+    "R2": r2,
+    "Adjusted R2": adjusted_r2
 }])
 
 print(
@@ -1253,7 +1252,7 @@ print(
     "It is therefore the preferred classifier based on the balance "
     "between precision and recall. "
     "The regression model is evaluated separately because its "
-    "MAE, RMSE, R² and Adjusted R² metrics measure a different task "
+    "MAE, RMSE, R2 and Adjusted R2 metrics measure a different task "
     "and are not directly comparable with classification metrics."
 )
 

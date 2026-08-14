@@ -15,15 +15,6 @@ os.makedirs("analytics/charts", exist_ok=True)
 # Load raw Titanic dataset exactly once
 df = sns.load_dataset("titanic")
 
-print("\n========== DATASET SHAPE ==========")
-print(df.shape)
-
-print("\n========== DATASET INFO ==========")
-df.info()
-
-print("\n========== DATASET DESCRIBE ==========")
-print(df.describe())
-
 # Required offline fallback
 df.to_csv(
     "analytics/titanic.csv",
@@ -33,9 +24,18 @@ df.to_csv(
 print("\nRaw dataset saved to:")
 print("analytics/titanic.csv")
 
+print("\n========== DATASET SHAPE ==========")
+print(df.shape)
+
+print("\n========== DATASET INFO ==========")
+df.info()
+
+print("\n========== DATASET DESCRIBE ==========")
+print(df.describe())
+
 
 # ============================================================
-# MISSING VALUES — BEFORE CLEANING
+# MISSING VALUES - BEFORE CLEANING
 # ============================================================
 
 missing = df.isnull().sum()
@@ -60,7 +60,7 @@ print(missing_report)
 
 print("\n========== CLEANING ==========")
 
-# Age: 19.865% → 5%-30% → median imputation
+# Age: 19.865% -> 5%-30% -> median imputation
 age_median = df["age"].median()
 
 df["age"] = df["age"].fillna(
@@ -68,11 +68,11 @@ df["age"] = df["age"].fillna(
 )
 
 print(
-    f"age: 19.8653% missing → median imputation. "
+    f"age: 19.8653% missing -> median imputation. "
     f"Median = {age_median:.2f}"
 )
 
-# Embarked: 0.224% → under 5% → drop affected rows
+# Embarked: 0.224% -> under 5% -> drop affected rows
 embarked_missing = df["embarked"].isna().sum()
 
 df = df.dropna(
@@ -80,7 +80,7 @@ df = df.dropna(
 )
 
 print(
-    f"embarked: 0.2245% missing → "
+    f"embarked: 0.2245% missing -> "
     f"dropped {embarked_missing} rows."
 )
 
@@ -92,7 +92,7 @@ if "embark_town" in df.columns:
     )
 
 print(
-    "embark_town: redundant with embarked → column dropped."
+    "embark_town: redundant with embarked -> column dropped."
 )
 
 # Deck: 77.2166% missing.
@@ -110,7 +110,7 @@ if "deck" in df.columns:
     )
 
 print(
-    f"deck: {deck_missing_percentage:.4f}% missing → "
+    f"deck: {deck_missing_percentage:.4f}% missing -> "
     "column dropped because missingness is too high for reliable imputation."
 )
 
@@ -137,7 +137,7 @@ print("analytics/titanic_cleaned.csv")
 
 
 # ============================================================
-# UNIVARIATE ANALYSIS — AGE
+# UNIVARIATE ANALYSIS - AGE
 # ============================================================
 
 print("\n========== AGE IQR ANALYSIS ==========")
@@ -191,7 +191,7 @@ plt.close()
 
 
 # ============================================================
-# UNIVARIATE ANALYSIS — FARE
+# UNIVARIATE ANALYSIS - FARE
 # ============================================================
 
 print("\n========== FARE IQR ANALYSIS ==========")
@@ -333,7 +333,7 @@ print(
 
 
 # ============================================================
-# CORRELATION MATRIX — EXACTLY SIX REQUIRED COLUMNS
+# CORRELATION MATRIX - EXACTLY SIX REQUIRED COLUMNS
 # ============================================================
 
 correlation_columns = [
@@ -415,13 +415,13 @@ print(
 for feature_a, feature_b, value, absolute_value in pairs[:2]:
 
     print(
-        f"{feature_a} ↔ {feature_b}: "
+        f"{feature_a} <-> {feature_b}: "
         f"{value:.4f}"
     )
 
 
 # ============================================================
-# MULTIVARIATE DATA STORY — CHART 1
+# MULTIVARIATE DATA STORY - CHART 1
 # ============================================================
 
 plt.figure(figsize=(8, 5))
@@ -458,7 +458,7 @@ print(
 
 
 # ============================================================
-# CHART 2 — PCLASS
+# CHART 2 - PCLASS
 # ============================================================
 
 plt.figure(figsize=(8, 5))
@@ -495,7 +495,7 @@ print(
 
 
 # ============================================================
-# CHART 3 — SEX + PCLASS
+# CHART 3 - SEX + PCLASS
 # ============================================================
 
 plot_data = (
@@ -542,7 +542,7 @@ print(
 
 
 # ============================================================
-# CHART 4 — AGE / FARE / SURVIVAL
+# CHART 4 - AGE / FARE / SURVIVAL
 # ============================================================
 
 plt.figure(figsize=(9, 6))
@@ -580,7 +580,7 @@ print(
 
 
 # ============================================================
-# CHART 5 — FARE BY SURVIVAL
+# CHART 5 - FARE BY SURVIVAL
 # ============================================================
 
 plt.figure(figsize=(8, 5))
